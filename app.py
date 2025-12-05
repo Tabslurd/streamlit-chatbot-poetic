@@ -64,16 +64,12 @@ if prompt := st.chat_input("Bisikkan apa yang hatimu rasakan..."):
             except Exception as e:
                 # Tangani kesalahan dengan bahasa puitis
                 full_response = f"Sayang sekali, hening ini terpecah. Ada badai tak terlihat yang mengganggu alunan kata: {e}"
-
-        st.markdown(full_response)
+                st.markdown(full_response)
         
         # Tambahkan respons bot ke riwayat
         st.session_state.messages.append({"role": "assistant", "content": full_response})
-
         st.markdown(full_response)
         
-        # Tambahkan respons bot ke riwayat
-        st.session_state.messages.append({"role": "assistant", "content": full_response})
 
 st.set_page_config(
 page_title="Cermin Aksara Senja", 
